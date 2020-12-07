@@ -4,8 +4,8 @@ const StackedBar = (w=>{
 	nestSvgEl=(node,tag,attrs)=>{
 		const e=node.appendChild(d.createElementNS('http://www.w3.org/2000/svg',tag));
 		if(attrs){
-			for(const attr of w.Object.entries(attrs)){
-				e.setAttribute(...attr)
+			for(const [a,b] of w.Object.entries(attrs)){
+				b && e.setAttribute(a,b)
 			}
 		};
 		return e
